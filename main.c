@@ -6,21 +6,33 @@
 int main(int argc, char *argv[]) {
 	
 
-	int x;
+	char x;
 	
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%d",&x);
+	printf("input a char : ");
+	scanf("%c",&x); //문자형은 %c로 받아야한다. 
 	
-	if(x>0)
+	if('A'<=x && x<='Z')
 	{
-		printf("절댓값은 %d 입니다.",x);
+		printf("대문자입니다.");
+	} 
+	
+	else if('a'<=x && x<='z')
+	{
+		printf("소문자입니다.");
 	 } 
 	 
-	else
+	
+	else if('0'<=x && x<='9') //작은 따옴표로 묶어줘야지 아스키코드가 된다. 
 	{
-		printf("절댓값은 %d입니다.",-x);
+		printf("숫자입니다.");
 	}
 	
+	else
+	{
+		printf("기타 글자 입니다.");
+	}
+	
+
 	return 0;	
 	
 }
