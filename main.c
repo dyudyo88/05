@@ -5,32 +5,24 @@
 
 int main(int argc, char *argv[]) {
 	
-
-	char x;
+	int num=0; //초기화 하기! 
+	char str[100]; //배열의 크기를 100으로 설정한거임. 
+	char c;
 	
-	printf("input a char : ");
-	scanf("%c",&x); //문자형은 %c로 받아야한다. 
 	
-	if('A'<=x && x<='Z')
+	printf("input a string:");
+	//scanf("%s);
+	
+	while((c=getchar())!='\n') //한글자씩 가져와서 c에 저장을 해준다.
 	{
-		printf("대문자입니다.");
-	} 
+		if('0'<=c && '9'>=c)
+		
+		{
+			num++;
+		}
+	}	
 	
-	else if('a'<=x && x<='z')
-	{
-		printf("소문자입니다.");
-	 } 
-	 
-	
-	else if('0'<=x && x<='9') //작은 따옴표로 묶어줘야지 아스키코드가 된다. 
-	{
-		printf("숫자입니다.");
-	}
-	
-	else
-	{
-		printf("기타 글자 입니다.");
-	}
+	 printf("the number of digits are %d", num);
 	
 
 	return 0;	
